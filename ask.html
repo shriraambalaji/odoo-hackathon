@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>StackIt</title>
+  <link rel="stylesheet" href="ask.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="login">
+      <h3>StackIt</h3>
+      <ul>
+        <li><a href="#"><b>HOME🔔</b></a></li>
+        <li><a href="#"><b>MORE▼</b></a></li>
+      </ul>
+    </div>
+
+    <div class="ask">
+        <label><b>Ask a Question</b></label>
+        <input type="text" placeholder="Enter" id="que">
+      <button onclick="ans()"><b>SUBMIT</b></button>
+    </div>
+  </div>
+  <script>
+    function ans(){
+        var question=document.getElementById("que").value;
+
+        window.location.href = "answer.html?data=" + encodeURIComponent(question);
+
+    }
+  </script>
+</body>
+</html>
