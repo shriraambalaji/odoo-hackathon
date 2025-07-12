@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f6dada;
+            
+        }
+
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+
+        .login {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 24px;
+            color: #000;
+        }
+        
+
+        .login ul{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .login ul li a {
+            text-decoration:none;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .login a:hover{
+            text-decoration: underline;
+            color: blue;
+        }
+
+        
+        .ask{
+           
+            margin-top: 50px;
+            padding: 25px;
+            font-weight: bold;
+        }
+        .ask li{
+            margin-top: 35px;
+            list-style-type: none;
+            margin-left: 10px;
+        }
+        .ask textarea{
+            width: 80%;
+            padding: 25px;
+            margin-top: 20px;
+            margin-left: 120px;
+            font-size: 20px;
+            background-color: white;
+            box-shadow: 1px 2px 10px rgb(47, 59, 48);
+            border: none;
+            border-radius: 15px;
+        }
+        .btn{
+            margin-left: 840px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 15px;
+            font-weight: bold;
+            border: none;
+        }
+        .btn:hover{
+              background-color: #f6dada;
+        }
+        .ask textarea:focus{
+            border: none;
+            outline: none;
+        }
+        #display{
+            margin-left: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h3>StackIt</h3>
+            <ul>
+               <li><a href="#">HOME🔔</a></li>
+               <li><a href="#">MORE🔻</a></li>
+            </ul>
+        </div>
+        <div class="ask">
+            <li >Question</li>
+            <p id="display"></p>
+            <li>Submit your answer</li>
+            <textarea name="" id=""></textarea>
+            <button class="btn" onclick="ind()">SUBMIT</button>
+
+        </div>
+    </div>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const data = urlParams.get("data");
+        console.log(data);
+
+        document.getElementById("display").innerText = data;
+         function ind(){
+            window.location.href="index.html";
+        }
+    </script>
+</body>
+</html>
